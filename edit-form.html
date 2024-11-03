@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Section</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <h2>Section Form</h2>
+    <div class="container">
+      <form id="editForm" onsubmit="return handleSubmit(event)">
+        <label for="namaInput">Nama</label>
+        <input type="text" id="namaInput" required />
+
+        <label for="roleInput">Role</label>
+        <input type="text" id="roleInput" required />
+
+        <label for="availabilityInput">Availability</label>
+        <input type="text" id="availabilityInput" required />
+
+        <label for="ageInput">Usia</label>
+        <input type="text" id="ageInput" required />
+
+        <label for="locationInput">Lokasi</label>
+        <input type="text" id="locationInput" required />
+
+        <label for="experienceInput">Years Experience</label>
+        <input type="text" id="experienceInput" required />
+
+        <label for="emailInput">Email</label>
+        <input type="email" id="emailInput" required />
+
+        <input class="buttonSubmit" type="submit" value="SUBMIT" />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("namaInput").value =
+          localStorage.getItem("nama") || "";
+        document.getElementById("roleInput").value =
+          localStorage.getItem("role") || "";
+        document.getElementById("availabilityInput").value =
+          localStorage.getItem("availability") || "";
+        document.getElementById("ageInput").value =
+          localStorage.getItem("age") || "";
+        document.getElementById("locationInput").value =
+          localStorage.getItem("location") || "";
+        document.getElementById("experienceInput").value =
+          localStorage.getItem("experience") || "";
+        document.getElementById("emailInput").value =
+          localStorage.getItem("email") || "";
+      };
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

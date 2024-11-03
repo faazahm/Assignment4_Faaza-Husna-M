@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Section Profile</h2>
+    <div class="container">
+      <div class="img">
+        <img src="profile2.jpg" width="150px" height="150px" />
+      </div>
+      <div class="name">
+        <h3 class="profile-name" id="display-nama">Nama Anda</h3>
+        <p class="profile-title" id="display-role">Front End Designer</p>
+        <div class="button1">
+          <input
+            class="buttonn"
+            type="button"
+            name="Edit"
+            value="Edit"
+            onclick="window.location.href='edit-form.html'"
+          />
+          <input class="button2" type="button" name="Resume" value="Resume" />
+        </div>
+      </div>
+      <div class="profile-details">
+        <p><b>Availability</b> <span id="availability"></span></p>
+        <p><b>Usia</b> <span id="age"></span></p>
+        <p><b>Lokasi</b> <span id="location"></span></p>
+        <p><b>Pengalaman</b> <span id="experience"></span></p>
+        <p><b>Email</b> <span id="email"></span></p>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        document.getElementById("display-nama").innerText =
+          localStorage.getItem("nama") || "Nama Anda";
+        document.getElementById("display-role").innerText =
+          localStorage.getItem("role") || "Front End Designer";
+        document.getElementById("availability").innerText =
+          localStorage.getItem("availability") || "N/A";
+        document.getElementById("age").innerText =
+          localStorage.getItem("age") || "N/A";
+        document.getElementById("location").innerText =
+          localStorage.getItem("location") || "N/A";
+        document.getElementById("experience").innerText =
+          localStorage.getItem("experience") || "N/A";
+        document.getElementById("email").innerText =
+          localStorage.getItem("email") || "N/A";
+      };
+    </script>
+  </body>
+</html>
